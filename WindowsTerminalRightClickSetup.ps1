@@ -63,6 +63,7 @@ if(-not($getWindowsTerminal)){
 "@ -ForegroundColor Yellow
 
     Write-Host $leng.PrintUser03 -ForegroundColor Green
+    Start-Sleep 2
     Start-Process notepad.exe $windowsTerminalProperties  -Wait
     $getRequireSetting = Get-Content -Path $windowsTerminalProperties
     } until ($getRequireSetting -match '"startingDirectory": "."')
