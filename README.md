@@ -15,6 +15,9 @@ choco install microsoft-windows-terminal -y
 ## Setup right-click context menu:
 Clone and download this GitHub repo and open PowerShell as an administrator in the root directory.
 
+***Check the YouTube video here!***
+[https://youtu.be/d12w6o7lYOM](https://youtu.be/d12w6o7lYOM)
+
 Install:
 ```powershell
 .\SetupWindowsTerminalRightClick.ps1
