@@ -1,7 +1,7 @@
 # WindowsTerminal RightClick Setup
 
 Add [Windows Terminal](https://github.com/microsoft/terminal) Add "open Windows terminal here" into the right-click context menu.
-![""](capture.PNG)
+![""](Capture.PNG)
 
 ## Windows Terminal Installation:
 Install the [Windows Terminal from the Microsoft Store](https://aka.ms/terminal).
