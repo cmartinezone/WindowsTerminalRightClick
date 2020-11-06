@@ -5,7 +5,7 @@ Add [Windows Terminal](https://github.com/microsoft/terminal) Add "open Windows 
 
 ## Windows Terminal Installation:
 Install the [Windows Terminal from the Microsoft Store](https://aka.ms/terminal).
-or use chocolatey.
+or use chocolatey https://chocolatey.org/.
 ```bash
 choco install microsoft-windows-terminal -y
 ```
