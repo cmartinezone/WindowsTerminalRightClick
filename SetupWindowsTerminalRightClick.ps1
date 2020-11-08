@@ -1,6 +1,6 @@
 
 #Author: Carlos Martinez Github @cmartinezone  
-#Version: 1.0
+#Version: 1.1
 $host.ui.RawUI.WindowTitle = "WindowsTerminal RightClickMenu setup v.1.0 - GitHub: @cmartinezone"
 
 #Find windows terminal
@@ -11,18 +11,18 @@ $getLeng = Get-WinSystemLocale
 
 #Set user lenguage leyout
 $leng = @{} # Hash table for user lenguage 
-if ($getLeng.DisplayName -match 'Español' -or $getLeng.DisplayName -match 'Spanish') {
-    $leng = @{} 
+if ($getLeng.DisplayName -match 'Espa�ol' -or $getLeng.DisplayName -match 'Spanish') {
+
     $leng.PrintUser00 = 'No se ha detectado WindowsTerminal instalado!'
     $leng.PrintUser01 = 'Porfavor actualice WindowsTerminal settings.json'
     $leng.PrintUser02 = 'En "profiels" configure:'
     $leng.PrintUser03 = '!Cierre el bloc de notas cuando haya terminado de editar!'
-    $leng.PrintUser04 = 'Configuración de el registro...'
-    $leng.PrintUser05 = 'Configuración Completada!'
+    $leng.PrintUser04 = 'Configurando el registro...'
+    $leng.PrintUser05 = 'Configuracion Completa!'
     $leng.PrintUser06 = 'Disfruta Windows Terminal!'
 
-    $leng.SetRegProperty00 = 'Abrir Windows Terminal aquí'
-    $leng.SetRegProperty01 = 'Abrir Windows Terminal aquí (Administrador)'
+    $leng.SetRegProperty00 = 'Abrir Windows Terminal aqui'
+    $leng.SetRegProperty01 = 'Abrir Windows Terminal aqui (Administrador)'
 
 }else{
     $leng.PrintUser00 = 'No detected WindowsTerminal installation'
@@ -36,6 +36,7 @@ if ($getLeng.DisplayName -match 'Español' -or $getLeng.DisplayName -match 'Span
     $leng.SetRegProperty00 = 'Open Windows Terminal here'
     $leng.SetRegProperty01 = 'Open Windows Terminal here (Admin)'
 }
+
 
 #If Windows Terminal is installed
 if(-not($getWindowsTerminal)){ 
@@ -73,8 +74,8 @@ if(-not($getWindowsTerminal)){
 
      ## PRESET REGISTRY VALUES ##
      $windowsTerminalIcon = ($getWinTernInstallationPath.InstallLocation +"\WindowsTerminal.exe")
-     $windowsTerminalCommand = 'wt.exe'
-     $windowsTerminalAdminCommand = "PowerShell -WindowStyle Hidden  -Command Start-Process wt.exe -ArgumentList '-d','.' -Verb runAs "
+     $windowsTerminalCommand = $env:LOCALAPPDATA+"\Microsoft\WindowsApps\wt.exe"
+     $windowsTerminalAdminCommand = "PowerShell -WindowStyle Hidden  -Command Start-Process "+ $env:LOCALAPPDATA+"\Microsoft\WindowsApps\wt.exe" +" -ArgumentList '-d','.' -Verb runAs "
      
      Write-Host $leng.PrintUser04 -ForegroundColor Yellow
      ## SET REGISTRY VALUES ##
