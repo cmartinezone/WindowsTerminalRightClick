@@ -5,7 +5,7 @@ Add [Windows Terminal](https://github.com/microsoft/terminal) Add "open Windows 
 
 ## Windows Terminal Installation:
 Install the [Windows Terminal from the Microsoft Store](https://aka.ms/terminal).
-or use chocolatey.
+or use chocolatey https://chocolatey.org/.
 ```bash
 choco install microsoft-windows-terminal -y
 ```
@@ -14,6 +14,9 @@ choco install microsoft-windows-terminal -y
 
 ## Setup right-click context menu:
 Clone and download this GitHub repo and open PowerShell as an administrator in the root directory.
+
+***Check the YouTube video here!***
+[https://youtu.be/d12w6o7lYOM](https://youtu.be/d12w6o7lYOM)
 
 Install:
 ```powershell
