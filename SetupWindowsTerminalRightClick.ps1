@@ -11,7 +11,7 @@ $getLeng = Get-WinSystemLocale
 
 #Set user lenguage leyout
 $leng = @{} # Hash table for user lenguage 
-if ($getLeng.DisplayName -match 'Espa�ol' -or $getLeng.DisplayName -match 'Spanish') {
+if ($getLeng.Name -match 'es-' -or $getLeng.Name -match 'ES-') {
 
     $leng.PrintUser00 = 'No se ha detectado WindowsTerminal instalado!'
     $leng.PrintUser01 = 'Porfavor actualice WindowsTerminal settings.json'
